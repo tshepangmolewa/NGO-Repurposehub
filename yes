@@ -1,0 +1,2004 @@
+donor_dashboard.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .sidebar {
+            width: 170px;
+            background-color: #2c3e50;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            padding: 20px;
+            background: #34495e;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .sidebar img {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px auto;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .sidebar ul li {
+            padding: 15px 10px;
+            text-align: left;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .sidebar ul li a:hover {
+            
+            padding-left: 20px;
+        }
+
+        .main-content {
+            margin-left: 170px;
+            padding: 20px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+
+        table th, table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px; /* Smaller font for cells */
+        }
+
+        table th {
+            background: #f4f4f4;
+            font-weight: bold;
+            font-size: 13px; /* Small and bold font for headers */
+            padding: 10px 12px; /* Reduce padding to make the header slimmer */
+            text-transform: none; /* Ensure no uppercase */
+        }
+
+        table tr:hover {
+            background: #f1f1f1;
+        }
+
+        table td h4 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        /* Refined "Give" Button Style */
+        table .btn {
+            display: inline-block;
+            padding: 10px 16px; /* Increase padding for better appearance */
+            background: linear-gradient(to right, #16a085, #1abc9c); /* Gradient effect */
+            color: white;
+            border: none;
+            border-radius: 30px; /* Rounder button */
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+
+        table .btn:hover {
+            background: linear-gradient(to right, #138f75, #16a085);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Enhance shadow on hover */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Welcome Donor</h2>
+        <ul>
+            <li><a href="message.html">Messages</a></li>
+            <li><a href="list_item.html">Donate an Item</a></li>
+            <li><a href="view_donations.html">View My Donations</a></li>
+            <li><a href="C:\Users\Dell\OneDrive\Desktop\Second attempt\homepage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Thanks for wanting to help someone in need!</h1>
+        <p>All the requests listed are from organisations reviewed by RepurposeHub as genuinely working with people in need.</p>
+        <p>Donating exactly what's needed is a smart way to give. It'll make you feel great and might just change a life.</p>
+
+
+        <!-- Items Needed Table with "Give" Button and Delivery Method Column -->
+        <h2>Items Needed</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Name</th>
+                    <th>Recipient (Organization)</th>
+                    <th>Reason</th>
+                    <th>Area</th>
+                    <th>Delivery Method</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>School Supplies</td>
+                    <td>Helping Hands</td>
+                    <td>To support underprivileged children’s education</td>
+                    <td>New York City</td>
+                    <td>Pick Up</td>
+                    <td><a href="list_item.html" class="btn">Give</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Winter Clothes</td>
+                    <td>Warm Hearts Foundation</td>
+                    <td>To provide warmth to the homeless during winter</td>
+                    <td>Chicago</td>
+                    <td>Drop Off</td>
+                    <td><a href="list_item.html" class="btn">Give</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Medical Supplies</td>
+                    <td>HealthCare Aid</td>
+                    <td>To support rural health centers</td>
+                    <td>Los Angeles</td>
+                    <td>Courier</td>
+                    <td><a href="list_item.html" class="btn">Give</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Children's Books</td>
+                    <td>Book for All</td>
+                    <td>To promote literacy in low-income neighborhoods</td>
+                    <td>Miami</td>
+                    <td>Pick Up</td>
+                    <td><a href="list_item.html" class="btn">Give</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>                                                                                                                                  list_item.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List an Item for Donation</title>
+    <style>
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7f8;
+        }
+
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tab div {
+            width: 33%;
+            padding: 15px;
+            text-align: center;
+            background-color: #f0f0f0;
+            color: #555;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            cursor: pointer;
+        }
+
+        .tab .active {
+            background-color: #0288d1;
+            color: white;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #4a4a4a;
+        }
+
+        input, textarea, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #0288d1;
+        }
+
+        button[type="button"], button[type="submit"] {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #0288d1;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease;
+            width: 49%;
+        }
+
+        button[type="button"]:hover, button[type="submit"]:hover {
+            background: #0277bd;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Style for the checkbox and label */
+        .checkbox-option {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            margin-top: 10px;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            margin-right: 10px; /* Space between checkbox and text */
+            width: 18px;
+            height: 18px;
+        }
+
+        .checkbox-option label {
+            font-size: 16px;
+            margin: 0; /* Align with the checkbox */
+            color: #333;
+        }
+
+        /* Smaller paragraph style */
+        p {
+            font-size: 14px; /* Smaller font for paragraph */
+            color: #666;
+            margin: 5px 0 15px 28px; /* Indentation for better visual structure */
+        }
+
+        .span{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Steps -->
+        <form id="list-form">
+            <div class="form-step active" id="step-1">
+                <h2>What would you like to give?</h2>
+
+                <label for="category">Choose category</label>
+                <select name="category" id="">
+                    <option value=""></option>
+                    <option value="">Baby and child</option>
+                    <option value="">Books and stationery</option>
+                    <option value="">Disability aid</option>
+                    <option value="">Groceries - non-perishable only</option>
+                    <option value="">Teen and adult - clothing and shoes</option>
+                    <option value="">Toiletries</option>
+                    <option value="">Toys and games</option>
+                </select> 
+
+                <h2>Item details</h2>
+                <label for="quantity">Qty</label>
+                <input type="number" name="">
+
+                <label for="condition">Condition</label>
+                <select name="condition" id="">
+                    <option value=""></option>
+                    <option value="">New</option>
+                    <option value="">Gently used</option>
+                    <option value="">Older but excellent</option>
+                </select>
+
+                <label for="information">Any extra information</label>
+                <textarea name="" id="" cols="50" rows="6"></textarea>
+
+                <label for="offer">List your offer for</label>
+                <select name="" id="">
+                    <option value=""></option>
+                    <option value="">Two weeks</option>
+                    <option value="">Three weeks</option>
+                    <option value="">One month</option>
+                    <option value="">Two months</option>
+                    <option value="">Three months</option>
+                </select>
+                <p>We ask you to list your offer for at least two weeks to give organizations time to see your offer.</p>
+
+                <label for="logo">Upload photo of your item</label>
+                <input type="file" id="logo" name="logo" accept="image/*">
+
+                <h2>How can it be delivered</h2>
+                
+                <!-- Checkbox Options for Delivery -->
+                <div class="checkbox-option">
+                    <input type="checkbox" name="" id="drop-off">
+                    <label for="drop-off">Drop off</label>
+                </div>
+                <p>I can drop off to an organization in my area</p>
+
+                <div class="checkbox-option">
+                    <input type="checkbox" name="" id="post-courier">
+                    <label for="post-courier">Post / Courier</label>
+                </div>
+                <p>I can send South Africa-wide</p>
+
+                <div class="checkbox-option">
+                    <input type="checkbox" name="" id="collect">
+                    <label for="collect">Collect</label>
+                </div>
+                <p>I need an organization to collect my donation</p>
+                
+            </div> 
+
+            <!-- Navigation Buttons -->
+            <div class="button-group">
+                <button type="button" id="submit">Submit</button>
+            </div>
+            <a href="donor_dashboard.html">Back to Dashboard</a>
+        </form>
+    </div>
+</body>
+</html>
+message.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar for conversation list */
+        .sidebar {
+            width: 25%;
+            background: #ffffff;
+            border-right: 1px solid #ddd;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ffffff;
+            margin: 0;
+            font-size: 22px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .conversation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .conversation-list li {
+            padding: 15px;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .conversation-list li:hover {
+            background: #f8f9fa;
+        }
+
+        .conversation-list li img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .conversation-list li .conversation-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .conversation-list li .conversation-info .name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .conversation-list li .conversation-info .preview {
+            font-size: 14px;
+            color: #777;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Chat area */
+        .chat-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f4f7f8;
+        }
+
+        .chat-header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #e8e8e8;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message-bubble {
+            max-width: 60%;
+            padding: 12px 18px;
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .message.sent {
+            background: #d1e7fd;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 20px;
+            margin-left: 40px;
+        }
+
+        .message.received {
+            background: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 20px;
+            margin-right: 40px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-bubble .timestamp {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        /* Styles for read receipts (ticks) */
+        .timestamp .single-tick, .timestamp .double-tick {
+            margin-left: 5px;
+        }
+
+        .timestamp .single-tick::before {
+            content: '\2713'; /* Single checkmark */
+            color: #666;
+        }
+
+        .timestamp .double-tick::before {
+            content: '\2713 \2713'; /* Double checkmarks */
+            color: #666;
+        }
+
+        .timestamp .double-tick.read::before {
+            color: #0b93f6; /* Blue ticks for read messages */
+        }
+
+        .message-box {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding: 15px;
+            background: white;
+            align-items: center;
+        }
+
+        .message-box textarea {
+            width: calc(100% - 60px);
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px;
+            outline: none;
+            resize: none;
+            font-size: 15px;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .send-button {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            background: #2c3e50;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .send-button:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 40%;
+            }
+
+            .send-button {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 200px;
+            }
+
+            .chat-area {
+                height: calc(100% - 200px);
+            }
+
+            .send-button {
+                width: 30px;
+                height: 30px;
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for Conversation List -->
+        <div class="sidebar">
+            <h2>Repurposehub Chats</h2>
+            <ul class="conversation-list">
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="User 1">
+                    <div class="conversation-info">
+                        <span class="name">NGO 1</span>
+                        <span class="preview">Received your donation offer...</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="User 2">
+                    <div class="conversation-info">
+                        <span class="name">NGO 2</span>
+                        <span class="preview">Hello! Let's coordinate...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <img src="https://via.placeholder.com/35" alt="Selected User">
+                <span>NGO 1</span>
+            </div>
+            <div class="chat-messages">
+                <div class="message-bubble message received">
+                    Hello, I received your donation offer.
+                    <span class="timestamp">
+                        10:30 AM
+                    </span>
+                </div>
+                <div class="message-bubble message sent">
+                    Great, when would you like to coordinate pickup?
+                    <span class="timestamp">
+                        10:31 AM
+                        <span class="double-tick read"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="message-box">
+                <textarea placeholder="Type your message..."></textarea>
+                <button class="send-button">&#9658;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+view_donations.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Donations</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f8;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 203vh;
+            height: 100vh; /* Full-screen height */
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Scrollable content */
+        }
+
+        h1 {
+            text-align: left;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .donation-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .donation-table th, .donation-table td {
+            text-align: left;
+            padding: 15px; /* Default padding for table cells */
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Adjusted styles for header cells */
+        .donation-table th {
+            background-color: #3498db;
+            color: white;
+            padding: 8px; /* Slimmer padding for header cells */
+            font-weight: 600;
+        }
+
+        .donation-table tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        .donation-table td {
+            font-size: 14px;
+        }
+
+        .status-label {
+            padding: 5px 10px;
+            color: white;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .status-available {
+            background-color: #4CAF50; /* Green */
+        }
+
+        .status-claimed {
+            background-color: #FFC107; /* Amber */
+        }
+
+        .status-delivered {
+            background-color: #3498db; /* Blue */
+        }
+
+        .organization-label {
+            margin-left: 10px;
+            font-style: italic;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin: 50px 0;
+        }
+
+        .dashboard-link {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .dashboard-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .dashboard-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Donations</h1>
+
+        <!-- Donation List Table -->
+        <table class="donation-table">
+            <thead>
+                <tr>
+                    <th style="height: 35px;">Donation ID</th> <!-- Slimmer header height -->
+                    <th style="height: 35px;">Item Name</th>
+                    <th style="height: 35px;">Category</th>
+                    <th style="height: 35px;">Condition</th>
+                    <th style="height: 35px;">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Row 1 (Available Item) -->
+                <tr>
+                    <td>#001</td>
+                    <td>Children's Books</td>
+                    <td>Books & Stationery</td>
+                    <td>Gently Used</td>
+                    <td>
+                        <span class="status-label status-available">Available</span>
+                    </td>
+                </tr>
+
+                <!-- Sample Row 2 (Claimed Item) -->
+                <tr>
+                    <td>#002</td>
+                    <td>Winter Clothing</td>
+                    <td>Teen & Adult Clothing</td>
+                    <td>New</td>
+                    <td>
+                        <span class="status-label status-claimed">Claimed</span>
+                        <span class="organization-label">by Hope Foundation</span>
+                    </td>
+                </tr>
+
+                <!-- Sample Row 3 (Delivered Item) -->
+                <tr>
+                    <td>#003</td>
+                    <td>Non-perishable Groceries</td>
+                    <td>Groceries</td>
+                    <td>Older but Excellent</td>
+                    <td>
+                        <span class="status-label status-delivered">Delivered</span>
+                        <span class="organization-label">to Food Bank SA</span>
+                    </td>
+                </tr>
+
+                <!-- Add additional rows as needed -->
+            </tbody>
+        </table>
+
+        <!-- Message for empty donations list -->
+        <div class="empty-message" style="display: none;">
+            You have not made any donations yet.
+        </div>
+
+        <!-- Back to Dashboard Link -->
+        <div class="dashboard-link">
+            <a href="donor_dashboard.html"> < Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
+Now on the the NGO side                                                                                                     ngo_dashboard.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Dashboard</title>
+
+    <style>
+        /* Minimal CSS for layout */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            height: 100vh;
+            padding: 20px;
+        }
+        .sidebar h2, .sidebar ul, .sidebar li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .dashboard-sections {
+            display: flex;
+            gap: 20px;
+        }
+        .section {
+            flex: 1;
+            background: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .section h3 {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .item-card {
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .item-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .item-card h4 {
+            margin: 10px 0;
+        }
+        .item-card p {
+            font-size: 14px;
+            color: #333;
+        }
+        
+        /* Search Bar Styles */
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 20px; /* Add top margin for spacing */
+        }
+        .search-container h2 {
+            margin: 0;
+        }
+        .search-bar {
+            padding: 12px 20px;
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .search-bar:focus {
+            outline: none;
+            border: 1px solid #3498db;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .search-bar::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Welcome NGO</h2>
+        <div class="profile-image">
+            <img src="ngo_logo.png" alt="NGO Logo">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard Home</a></li>
+            <li><a href="ngo_dashboard.html">View Available Items</a></li>
+            <li><a href="ngoRequest.html">Request Items</a></li>
+            <li><a href="#">Claimed Items</a></li>
+            <li><a href="ngoMessages.html">Messages</a></li>
+            <li><a href="update_profile.html">Profile Settings</a></li>
+            <li><a href="homepage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <h1>NGO Dashboard</h1>
+
+        <!-- Dashboard Overview Sections -->
+        <div class="dashboard-sections">
+            <div class="section">
+                <h3>Items Available for Claim</h3>
+                <p>Browse through the list of items donated by individuals and claim the ones that suit your needs.</p>
+                <a href="#" class="btn">View Items</a>
+            </div>
+            <div class="section">
+                <h3>Claimed Items</h3>
+                <p>Check the items you have claimed and track their status for pickup or delivery.</p>
+                <a href="#" class="btn">View Claimed Items</a>
+            </div>
+            <div class="section">
+                <h3>Messages</h3>
+                <p>View and respond to messages from donors and coordinate item pickups or deliveries.</p>
+                <a href="#" class="btn">Go to Messages</a>
+            </div>
+        </div>
+
+        <!-- Available Items Section -->
+        <div class="search-container">
+            <h2>Available Donations</h2>
+            <!-- Search Bar Container -->
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search for items by name or category..." onkeyup="searchItems()">
+        </div>
+
+        <div class="item-list" id="item-list">
+            <!-- Example Item Cards -->
+            <div class="item-card" data-name="Office Chairs" data-category="Furniture">
+                <img src="item_image_1.jpg" alt="Donated Item 1">
+                <h4>Office Chairs</h4>
+                <p>Category: Furniture</p>
+                <p>Location: New York, NY</p>
+                <a href="#" class="btn">Claim Item</a>
+            </div>
+
+            <div class="item-card" data-name="Winter Clothes" data-category="Clothing">
+                <img src="item_image_2.jpg" alt="Donated Item 2">
+                <h4>Winter Clothes</h4>
+                <p>Category: Clothing</p>
+                <p>Location: Boston, MA</p>
+                <a href="#" class="btn">Claim Item</a>
+            </div>
+
+            <div class="item-card" data-name="Books" data-category="Education">
+                <img src="item_image_3.jpg" alt="Donated Item 3">
+                <h4>Books</h4>
+                <p>Category: Education</p>
+                <p>Location: San Francisco, CA</p>
+                <a href="#" class="btn">Claim Item</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchItems() {
+            // Get the search bar input
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            
+            // Get all item cards
+            const items = document.querySelectorAll('.item-card');
+
+            // Loop through the items and hide or show based on the search query
+            items.forEach(item => {
+                const name = item.getAttribute('data-name').toLowerCase();
+                const category = item.getAttribute('data-category').toLowerCase();
+
+                if (name.includes(query) || category.includes(query)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+ngoMessages.html:  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Messaging System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar for conversation list */
+        .sidebar {
+            width: 25%;
+            background: #ffffff;
+            border-right: 1px solid #ddd;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ffffff;
+            margin: 0;
+            font-size: 22px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .conversation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .conversation-list li {
+            padding: 15px;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .conversation-list li:hover {
+            background: #f8f9fa;
+        }
+
+        .conversation-list li img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .conversation-list li .conversation-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .conversation-list li .conversation-info .name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .conversation-list li .conversation-info .preview {
+            font-size: 14px;
+            color: #777;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Chat area */
+        .chat-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f4f7f8;
+        }
+
+        .chat-header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #e8e8e8;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message-bubble {
+            max-width: 60%;
+            padding: 12px 18px;
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .message.sent {
+            background: #d1e7fd;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 20px;
+            margin-left: 40px;
+        }
+
+        .message.received {
+            background: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 20px;
+            margin-right: 40px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-bubble .timestamp {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        /* Styles for read receipts (ticks) */
+        .timestamp .single-tick, .timestamp .double-tick {
+            margin-left: 5px;
+        }
+
+        .timestamp .single-tick::before {
+            content: '\2713'; /* Single checkmark */
+            color: #666;
+        }
+
+        .timestamp .double-tick::before {
+            content: '\2713 \2713'; /* Double checkmarks */
+            color: #666;
+        }
+
+        .timestamp .double-tick.read::before {
+            color: #0b93f6; /* Blue ticks for read messages */
+        }
+
+        .message-box {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding: 15px;
+            background: white;
+            align-items: center;
+        }
+
+        .message-box textarea {
+            width: calc(100% - 60px);
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px;
+            outline: none;
+            resize: none;
+            font-size: 15px;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .send-button {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            background: #2c3e50;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .send-button:hover {
+            background: #2c3e50;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 40%;
+            }
+
+            .send-button {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 200px;
+            }
+
+            .chat-area {
+                height: calc(100% - 200px);
+            }
+
+            .send-button {
+                width: 30px;
+                height: 30px;
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for Conversation List -->
+        <div class="sidebar">
+            <h2>Repurposehub Chats</h2>
+            <ul class="conversation-list">
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Donor 1">
+                    <div class="conversation-info">
+                        <span class="name">Donor 1</span>
+                        <span class="preview">Thank you for claiming the items...</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="Donor 2">
+                    <div class="conversation-info">
+                        <span class="name">Donor 2</span>
+                        <span class="preview">I have some more items to donate...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <img src="https://via.placeholder.com/35" alt="Selected Donor">
+                <span>Donor 1</span>
+            </div>
+            <div class="chat-messages">
+                <div class="message-bubble message received">
+                    Thank you for claiming the items.
+                    <span class="timestamp">
+                        10:45 AM
+                    </span>
+                </div>
+                <div class="message-bubble message sent">
+                    You're welcome! We will arrange a pickup tomorrow.
+                    <span class="timestamp">
+                        10:46 AM
+                        <span class="double-tick read"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="message-box">
+                <textarea placeholder="Type your message..."></textarea>
+                <button class="send-button">&#9658;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>   
+                                                                                                                         ngoRequest.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Items</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 32px; /* Increased font size */
+            color: #333;
+        }
+
+        .item-container {
+            display: flex;
+            justify-content: space-around; /* Distribute space equally */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            gap: 20px;
+            max-width: 1200px; /* Limit max width for better visibility */
+            width: 100%; /* Ensure it takes full width */
+            padding: 10px; /* Add some padding */
+        }
+
+        .item-card {
+            flex: 1 1 200px; /* Make cards responsive with a minimum width */
+            height: 300px; /* Decreased height */
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card-inner.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .card-front {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .card-front:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .card-front h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Different colors for each card back */
+        .item-card:nth-child(1) .card-back {
+            background-color: #a0d3e8; /* Light blue */
+        }
+
+        .item-card:nth-child(2) .card-back {
+            background-color: #f7d2c5; /* Light pink */
+        }
+
+        .item-card:nth-child(3) .card-back {
+            background-color: #c5e1a5; /* Light green */
+        }
+
+        .item-card:nth-child(4) .card-back {
+            background-color: #ffe9b3; /* Light yellow */
+        }
+
+        .item-card:nth-child(5) .card-back {
+            background-color: #d4c0e0; /* Light purple */
+        }
+
+        .quantity-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-controls input {
+            width: 40px;
+            text-align: center;
+        }
+
+        .add-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .add-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Submit Button */
+        .submit-btn, .reset-btn {
+            background-color: #007bff;
+            color: white;
+            width: 100px; /* Set width for round button */
+            height: 50px; /* Set height for round button */
+            border: none;
+            border-radius: 25px; /* Make button round */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex; /* Flex display for centering text */
+            justify-content: center; /* Center text */
+            align-items: center; /* Center text vertically */
+        }
+
+        .submit-btn:hover, .reset-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Back Link */
+        .back-link {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 20px; /* Add margin for spacing */
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center buttons */
+            align-items: center;
+            margin-top: 40px; /* Space above buttons */
+        }
+
+        /* Floating "+" button */
+        .floating-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .item-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Request Items</h1>
+
+<div class="item-container">
+    <!-- Clothes Category Card -->
+    <div class="item-card" data-item="Clothes">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="https://via.placeholder.com/80?text=Clothes" alt="Clothes">
+                <h3>Clothes</h3>
+                <div class="floating-btn">+</div>
+            </div>
+            <div class="card-back">
+                <h3>Clothes</h3>
+                <p>Select Item and Quantity:</p>
+                <select class="item-select">
+                    <option value="T-shirts">T-shirts</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Socks">Socks</option>
+                </select>
+                <div class="quantity-controls">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"> <!-- Set initial value to 0 -->
+                    <button class="increase-btn">+</button>
+                </div>
+                <textarea placeholder="Reason for request..." class="description-text"></textarea>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shoes Category Card -->
+    <div class="item-card" data-item="Shoes">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="https://via.placeholder.com/80?text=Shoes" alt="Shoes">
+                <h3>Shoes</h3>
+                <div class="floating-btn">+</div>
+            </div>
+            <div class="card-back">
+                <h3>Shoes</h3>
+                <p>Select Item and Quantity:</p>
+                <select class="item-select">
+                    <option value="Sneakers">Sneakers</option>
+                    <option value="Flip Flops">Flip Flops</option>
+                    <option value="School Shoes">School Shoes</option>
+                    <option value="Sandals">Sandals</option>
+                </select>
+                <div class="quantity-controls">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"> <!-- Set initial value to 0 -->
+                    <button class="increase-btn">+</button>
+                </div>
+                <textarea placeholder="Reason for request..." class="description-text"></textarea>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blankets Category Card -->
+    <div class="item-card" data-item="Blankets">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="https://via.placeholder.com/80?text=Blankets" alt="Blankets">
+                <h3>Blankets</h3>
+                <div class="floating-btn">+</div>
+            </div>
+            <div class="card-back">
+                <h3>Blankets</h3>
+                <p>Select Item and Quantity:</p>
+                <div class="quantity-controls">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"> <!-- Set initial value to 0 -->
+                    <button class="increase-btn">+</button>
+                </div>
+                <textarea placeholder="Reason for request..." class="description-text"></textarea>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books Category Card -->
+    <div class="item-card" data-item="Books">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="https://via.placeholder.com/80?text=Books" alt="Books">
+                <h3>Books</h3>
+                <div class="floating-btn">+</div>
+            </div>
+            <div class="card-back">
+                <h3>Books</h3>
+                <p>Select Age Group:</p>
+                <select class="item-select">
+                    <option value="Age 1-3">Age 1-3</option>
+                    <option value="Age 4-7">Age 4-7</option>
+                    <option value="Age 8-15">Age 8-15</option>
+                </select>
+                <div class="quantity-controls">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"> <!-- Set initial value to 0 -->
+                    <button class="increase-btn">+</button>
+                </div>
+                <textarea placeholder="Reason for request..." class="description-text"></textarea>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toys Category Card -->
+    <div class="item-card" data-item="Toys">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="https://via.placeholder.com/80?text=Toys" alt="Toys">
+                <h3>Toys</h3>
+                <div class="floating-btn">+</div>
+            </div>
+            <div class="card-back">
+                <h3>Toys</h3>
+                <p>Select Type:</p>
+                <select class="item-select">
+                    <option value="Girls">Girls</option>
+                    <option value="Boys">Boys</option>
+                </select>
+                <div class="quantity-controls">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"> <!-- Set initial value to 0 -->
+                    <button class="increase-btn">+</button>
+                </div>
+                <textarea placeholder="Reason for request..." class="description-text"></textarea>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button Container -->
+<div class="button-container">
+    <a href="ngo_dashboard.html" class="back-link">Back</a>
+    <button class="submit-btn">Request ✓</button>
+    <button class="reset-btn">Reset</button>
+</div>
+
+<script>
+    document.querySelectorAll('.floating-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const card = this.closest('.item-card').querySelector('.card-inner');
+            card.classList.toggle('flipped');
+        });
+    });
+
+    document.querySelectorAll('.decrease-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const input = this.nextElementSibling;
+            if (input.value > 0) input.value--;
+        });
+    });
+
+    document.querySelectorAll('.increase-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const input = this.previousElementSibling;
+            input.value++;
+        });
+    });
+
+    document.querySelectorAll('.add-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const card = this.closest('.item-card');
+            const itemName = card.getAttribute('data-item');
+            const quantity = card.querySelector('.quantity-input').value;
+            const reason = card.querySelector('.description-text').value;
+            alert(`${quantity} ${itemName} added to request! Reason: ${reason}`);
+        });
+    });
+
+    // Submit Button Logic
+    document.querySelector('.submit-btn').addEventListener('click', function () {
+        let reviewMessage = 'Review your request items:\n';
+        const items = document.querySelectorAll('.item-card');
+
+        items.forEach(card => {
+            const itemName = card.getAttribute('data-item');
+            const quantity = card.querySelector('.quantity-input').value;
+            const reason = card.querySelector('.description-text').value;
+            if (quantity > 0) {
+                reviewMessage += `${itemName}: ${quantity} (Reason: ${reason})\n`;
+            }
+        });
+
+        if (reviewMessage === 'Review your request items:\n') {
+            alert("No items have been added!");
+        } else {
+            if (confirm(reviewMessage + "\nDo you want to submit your request?")) {
+                alert("Your request has been submitted!");
+                // Here you can implement form submission logic
+            }
+        }
+    });
+
+    // Reset Button Logic
+    document.querySelector('.reset-btn').addEventListener('click', function () {
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.value = 0; // Reset quantity to 0
+        });
+        document.querySelectorAll('.description-text').forEach(textarea => {
+            textarea.value = ''; // Clear reason text
+        });
+        alert("All fields have been reset!");
+    });
+</script>
+
+</body>
+</html>
+ Now on the Donor Dashboard every donation made by the donor should appear on the view_my_donations.html page ,  when an item is donated, it should show on the NGO dashboard on the available donations section. Messages should be written on the message.html and can be viewed and replied to by a relevant NGO.                                                                                                 On the NGO Dashboard, When an NGO is done requesting an item it should show on the items needed table on Donor Dashboard 
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Requests</title>
+    <style>
+        /* Inline CSS for styling similar to the donations page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 1800px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .table-responsive {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header>
+            <h2></h2>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Request List</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>NGO Name</th>
+                                <th>Item Name</th>
+                                <th>Requested Quantity</th>
+                                <th>Status</th>
+                                <th>Request Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Database connection details
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = ""; // Your database password
+                            $dbname = "repurposehub"; // Your database name
+
+                            // Create connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            // Check connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            // Fetch requests from the database
+                            $sql = "SELECT requests.request_id, ngos.org_name, requests.item_name, 
+                                           requests.requested_quantity, requests.status, requests.request_date 
+                                    FROM requests 
+                                    JOIN ngos ON requests.ngo_id = ngos.user_id";
+                            $result = $conn->query($sql);
+
+                            // Check if there are results
+                            if ($result->num_rows > 0) {
+                                // Output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['request_id'] . "</td>";
+                                    echo "<td>" . $row['org_name'] . "</td>";
+                                    echo "<td>" . $row['item_name'] . "</td>";
+                                    echo "<td>" . $row['requested_quantity'] . "</td>";
+                                    echo "<td>" . $row['status'] . "</td>";
+                                    echo "<td>" . $row['request_date'] . "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='6'>No requests found</td></tr>";
+                            }
+
+                            // Close connection
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
